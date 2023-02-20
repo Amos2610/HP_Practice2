@@ -3,12 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Work</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/reset.css">
     <meta name="description" content="">
+    <!-- 解説のコード -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css"> -->
 </head>
 
 <body>
@@ -16,17 +18,18 @@
         <h1 class="site-title">My Work</h1>
         <nav>
             <ul>
-                <li><a href="">About</a></li>
-                <li><a href="">Works</a></li>
-                <li><a href="">News</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li><a href=""><img src="img/icons-instagram.png" alt="instagramのアイコン"></a></li>
             </ul>
         </nav>
     </div>
     <img class="img_header" src="img/img_header.jpeg" alt="">
+
     <div class="container">
-        <div class="about">
+        <section class="about wrapper">
             <h1 class="sec-title">About</h1>
             <ul>
                 <li class="name">
@@ -45,11 +48,13 @@
                     <p>mail: xxx@xxxxxx.jp</p>
                 </li>
                 <li class="profile">
-                    <p>プロフィールテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                    <p>プロフィールテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        テキストテキストテキストテキストテキストテキスト</p>
                 </li>
             </ul>
-        </div>
-        <div class="works">
+        </section>
+        <section class="works wrapper">
             <h1 class="sec-title">Works</h1>
             <ul>
                 <li class="work">
@@ -71,8 +76,8 @@
                     <img src="img/img_work6.JPG" alt="">
                 </li>
             </ul>
-        </div>
-        <div class="news">
+        </section>
+        <div class="news wrapper">
             <h1 class="sec-title">News</h1>
             <dl>
                 <dt>2020.XX.XX</dt>
@@ -84,23 +89,29 @@
                 <dt>2019.XX.XX</dt>
                 <dd>デザイン雑誌「ＸＸＸＸＸＸ Vol.10』に掲載していただきました。</dd>
                 <dt>2019.XX.XX</dt>
-                <dd>【個展開催のお知らせ】テキストテキストテキストテキストテキストテキストテキスト</dd>
+                <dd>【個展開催のお知らせ】テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                    テキストテキストテキストテキストテキストテキストテキストテキストテキスト</dd>
             </dl>
         </div>
-        <div class="contact">
+        <section class="contact wrapper">
             <h1 class="sec-title">Contact</h1>
-            <dl>
-                <dt><label>NAME</label></dt>
-                <dd><input type="text" class="name2"></dd>
-                <dt><label>E-mail</label></dt>
-                <dd><input type="text" class="e-mail"></dd>
-                <dt class="message"><label>MESSAGE</label></dt>
-                <dd><textarea rows="10px" cols="60px"></textarea></dd>
-            </dl>
-            <button class="btn">
-                <a href="" class="send">送信</a>
-            </button>
-        </div>
+            <form action="#" method="post">
+                <dl>
+                    <dt><label>NAME</label></dt>
+                    <dd><input type="text" class="name2"></dd>
+                    <dt><label>E-mail</label></dt>
+                    <dd><input type="text" class="e-mail"></dd>
+                    <dt class="message"><label>MESSAGE</label></dt>
+                    <dd><textarea rows="10px" cols="60px"></textarea></dd>
+                </dl>
+                <!-- <button class="btn"> -->
+                <div class="button">
+                    <!-- <a href="" class="send">送信</a> -->
+                    <input type="submit" value="送信">
+                    <!-- </button> -->
+                </div>
+            </form>
+        </section>
     </div>
     <div class="footer">
         <div class="pp_link w_inner">

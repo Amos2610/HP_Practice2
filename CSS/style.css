@@ -1,6 +1,7 @@
 body {
     font-family: 'Hiragino Kaku Gothic Pro', 'Meiryo', 'sans-serif';
-    font-size: 15px;
+    font-size: 100%;
+    color: #24292e;
 }
 
 a {
@@ -8,22 +9,34 @@ a {
     color: #333;
 }
 
-ul {
-    list-style: none;
+img {
+    max-width: 100%;
 }
 
 li {
-    text-decoration: none;
+    list-style: none;
 }
+
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto 130px auto;
+    font-size: 0.9rem;
+    padding: 0 4%;
+}
+
+/* --------------------------------
+ヘッダー
+-----------------------------------*/
 
 .header {
     display: flex;
     background-color: #fff;
+    justify-content: space-between;
     /* margin-top: 100px; */
     max-width: 960px;
-    height: 225px;
-    margin: 0 240px 0 240px;
-    padding: 0 57px;
+    height: 270px;
+    margin: 0 auto;
+    padding: 0.4%;
     align-items: center;
 }
 
@@ -47,39 +60,68 @@ li {
 
 .header ul {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    list-style: none;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    /* margin: 0; */
+    /* list-style: none; */
+    padding: 10px 0;
 }
 
-.header ul li {
-    width: 100%;
-    min-width: 80px;
+.header li {
+    font-size: 0.9rem;
+    /* width: 100%; */
+    min-width: 30px;
     text-align: center;
+    margin-left: 30px;
+}
+
+.header li a:hover {
+    opacity: 0.7;
 }
 
 .header ul img {
-    width: 30px;
+    width: 20px;
     height: auto;
 }
 
+/* -------------------------
+MainVisual (container)
+----------------------------*/
+
 .container {
-    margin: 0 240px 0 240px;
-    padding: 0 57px;
-    width: 1000px;
+    /* margin: 0 240px 0 240px; */
+    /* padding: 0 57px; */
+    /* width: 1000px;    この文がめちゃくちゃ邪魔だった */
+    margin-bottom: 80px
 }
 
+.img_header {
+    width: 100%;
+    max-width: 1920px;
+    margin-bottom: 80px;
+    height: 420px;
+    object-fit: cover;
+    /*画像の縦横比を維持して、画像を親要素にフィットさせる*/
+}
+
+/* -------------------------
+About(container)
+----------------------------今日はここまで*/
+
 .container .sec-title {
-    margin-top: 150px;
+    font-size: 1.5rem;
+    /* margin-top: 80px; */
     margin-bottom: 65px;
     text-align: center;
-    font-size: 1.6em;
+}
+
+.container ul {
+    margin-bottom: 30px;
 }
 
 .container .name {
-    display: inline-block;
-    margin-bottom: 20px;
+    /* display: inline-block; */
+    margin-bottom: 30px;
 }
 
 .container .profile {
@@ -87,32 +129,46 @@ li {
     margin-top: 20px;
 }
 
+.container p {
+    text-align: justify;
+}
+
+/*--------------------------------
+Works
+-----------------------------------*/
+
 .works ul {
     display: flex !important;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 100px;
-    width: 100%;
+    margin-bottom: 50px;
+    /* width: 100%;
     text-align: center;
-    align-items: center;
+    align-items: center; */
 }
 
 .works li {
-    margin-bottom: 30px;
-    width: 30%;
-    text-align: center;
-    align-items: center;
+    margin-bottom: 23px;
+    width: 31%;
+    /* text-align: center;
+    align-items: center; */
 }
 
-.work img {
+/* .work img {
     height: auto;
     max-width: 100%;
-}
+} */
+
+/*--------------------------------
+News
+-----------------------------------*/
 
 .news dl {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    /* width: 100%; */
+    border-top: 1px solid #ddd;
+    margin-bottom: 20px;
 }
 
 .news dt {
@@ -122,9 +178,9 @@ li {
     border-bottom: 1px solid #ddd;
 }
 
-.news dt:first-child {
+/* .news dt:first-child {
     border-top: 1px solid #ddd;
-}
+} */
 
 .news dd {
     width: 80%;
@@ -132,58 +188,84 @@ li {
     border-bottom: 1px solid #ddd;
 }
 
-.news .first-dd {
+/* .news .first-dd {
     border-top: 1px solid #ddd;
-}
+} */
+
+/*--------------------------------
+Contact
+-----------------------------------*/
 
 .contact dl {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    /* width: 100%; */
+    margin-bottom: 20px;
 }
 
 .contact dt {
     width: 15%;
-    padding: 15px 0;
+    /* padding: 15px 0; */
 }
 
 .contact dd {
     width: 85%;
-    padding: 5px 0;
+    /* padding: 5px 0; */
+    margin-bottom: 10px;
 }
 
-.contact input {
-    display: flex;
-    flex-wrap: wrap;
+.contact input,
+textarea {
+    /* display: flex;
+    flex-wrap: wrap; */
     border: solid 1px #c8c8c8;
     width: 100%;
-    height: 40px;
+    /* height: 40px; */
     padding: 10px;
 }
 
 .contact textarea {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     border: solid 1px #c8c8c8;
-    width: 100%;
-    height: 150px;
-    padding: 10px;
+    width: 100%; */
+    height: 10rem;
+    /* padding: 10px; */
 }
 
-.contact button{
-    display: block;
+.button {
+    /* display: block;
     margin: 0 auto;
     margin-top: 20px;
     width: 200px;
     height: 50px;
     background-color: #333;
     color: #fff;
-    border: none;
+    border: none; */
+    text-align: center;
 }
 
-.contact .send{
+/* .contact .send{
     color: #fff;
+} */
+
+.button input {
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+    border: 1px solid #333;
 }
+
+.contact .button input:hover {
+    background-color: #fff;
+    color: #333;
+    /* border: 1px solid #333; */
+}
+
+/*--------------------------------
+Footer
+-----------------------------------*/
 
 .footer {
     margin-top: 60px;
@@ -204,4 +286,115 @@ li {
     color: #fff;
     font-size: 10px;
     padding: 7px 0 3px;
+}
+
+/* レスポンシブ対応 */
+/*--------------------------------
+SP
+-----------------------------------*/
+@media screen and (max-width: 600px) {
+    .wrapper {
+        margin-bottom: 70px;
+    }
+
+    .site-title {
+        margin-top: 20px;
+    }
+
+    .sec-title {
+        margin-bottom: 40px;
+    }
+
+    /*--------------------------------
+    Header
+    -----------------------------------*/
+
+    .header {
+        max-width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .header li {
+        font-size: 0.8rem;
+        margin-left: 20px;
+    }
+
+    .header li:first-child {
+        margin-left: 0;
+    }
+
+    /*--------------------------------
+    Works
+    -----------------------------------*/
+    .works ul {
+        flex-direction: column;
+    }
+
+    .works li {
+        width: 100%;
+    }
+
+    /*--------------------------------
+    News
+    -----------------------------------*/
+    .news dl {
+        flex-direction: column;
+    }
+
+    .news dt {
+        width: 100%;
+        padding-bottom: 0;
+        border-bottom: none;
+        text-align: left;
+    }
+
+    .news dd {
+        width: 100%;
+        padding-top: 0;
+        /* border-bottom: 1px solid #ddd; */
+    }
+
+    /*--------------------------------
+    Contact
+    -----------------------------------*/
+
+    .contact dl {
+        flex-direction: column;
+    }
+
+    .contact dt {
+        width: 100%;
+        /* padding: 15px 0; */
+    }
+
+    .contact dd {
+        width: 100%;
+        /* padding: 5px 0; */
+        /* margin-bottom: 10px; */
+    }
+
+    /* .contact input,
+    textarea {
+        display: flex;
+        flex-wrap: wrap;
+        border: solid 1px #c8c8c8;
+        width: 100%;
+        height: 40px;
+        padding: 10px;
+    }
+
+    .contact textarea {
+        display: flex;
+        flex-wrap: wrap;
+        border: solid 1px #c8c8c8;
+        width: 100%;
+        height: 10rem;
+        padding: 10px;
+    }
+
+    .button {
+        width: 200px;
+        text-align: center;
+    } */
 }
